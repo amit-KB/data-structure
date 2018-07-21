@@ -21,6 +21,15 @@ def matchingStrings(strings, queries):
         else:
             arr1.append(0)
     return arr1    
+    
+def matchingStringsSecond(strings, queries):
+    arr1 = []
+    c = collections.Counter(strings)
+    for val in queries:
+        arr1.append(c[val])
+    return arr1    
+
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
