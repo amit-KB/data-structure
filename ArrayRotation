@@ -1,0 +1,23 @@
+#!/bin/python
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    nd = raw_input().split()
+
+    n = int(nd[0])
+
+    d = int(nd[1])
+    arr1 = [0 for x in range( n )]
+    a = map(int, raw_input().rstrip().split())
+    if n != 1 & n != d :  
+        for i in range(n):
+            arr1[((i+n)-d)%n] = a[i]    
+            
+    print ' '.join(map(str, arr1))
